@@ -1,118 +1,81 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NeonMine Hoisting</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
+<section id="budget" class="plans active">
 
-<header>
-  <h1>⚡ NeonMine Hoisting</h1>
-  <p>Affordable & Powerful Minecraft Hosting</p>
-</header>
-
-<section class="features">
-  <div>🟢 99.9% Uptime</div>
-  <div>🛡 DDoS Protection</div>
-  <div>⚡ Instant Setup</div>
-  <div>💾 No Data Loss</div>
-  <div>🚀 Stable Performance</div>
-</section>
-
-<h2 style="text-align:center;color:#ffd000;margin-top:30px;">
-Minecraft Budget Plans
-</h2>
-
-<section class="plans">
-
-<!-- PLAN -->
-<div class="plan">
+<div class="plan-card" onclick="togglePlan(this)">
   <h2>Dirt Plan</h2>
-  <p>RAM: 4GB</p>
-  <p>CPU: 100%</p>
-  <p>Storage: 10GB SSD</p>
-  <p>Players: 10–15</p>
-  <p>Best for: Friends SMP</p>
-  <span>₹70 / month</span>
-  <a href="#order" class="order-btn">Order Now</a>
-  <section id="order">
+  <div class="plan-body">
+    <p>RAM: 4GB</p>
+    <p>CPU: 100%</p>
+    <p>Storage: 10GB SSD</p>
+    <p>Players: 10–15</p>
+    <p>Best for: Friends SMP</p>
+    <div class="price">₹70 / month</div>
+    <button class="order-btn">Order Now</button>
+  </div>
 </div>
 
-<div class="plan">
+<div class="plan-card" onclick="togglePlan(this)">
   <h2>Stone Plan</h2>
-  <p>RAM: 6GB</p>
-  <p>CPU: 150%</p>
-  <p>Storage: 15GB SSD</p>
-  <p>Players: 20–25</p>
-  <p>Best for: Plugin Servers</p>
-  <span>₹130 / month</span>
-  <a href="#order" class="order-btn">Order Now</a>
-  <section id="order">
+  <div class="plan-body">
+    <p>RAM: 6GB</p>
+    <p>CPU: 150%</p>
+    <p>Storage: 15GB SSD</p>
+    <p>Players: 20–25</p>
+    <p>Best for: Plugin Servers</p>
+    <div class="price">₹130 / month</div>
+    <button class="order-btn">Order Now</button>
+  </div>
 </div>
 
-<div class="plan">
+<div class="plan-card" onclick="togglePlan(this)">
   <h2>Iron Plan</h2>
-  <p>RAM: 8GB</p>
-  <p>CPU: 200%</p>
-  <p>Storage: 20GB SSD</p>
-  <p>Players: 25–30</p>
-  <p>Best for: Semi-Modded</p>
-  <span>₹180 / month</span>
-  <a href="#order" class="order-btn">Order Now</a>
-  <section id="order">
+  <div class="plan-body">
+    <p>RAM: 8GB</p>
+    <p>CPU: 200%</p>
+    <p>Storage: 20GB SSD</p>
+    <p>Players: 25–30</p>
+    <p>Best for: Semi-Modded</p>
+    <div class="price">₹180 / month</div>
+    <button class="order-btn">Order Now</button>
+  </div>
 </div>
 
-<div class="plan">
+<div class="plan-card" onclick="togglePlan(this)">
   <h2>Gold Plan</h2>
-  <p>RAM: 12GB</p>
-  <p>CPU: 250%</p>
-  <p>Storage: 30GB SSD</p>
-  <p>Players: 35–40</p>
-  <p>Best for: Large SMP</p>
-  <span>₹270 / month</span>
-  <a href="#order" class="order-btn">Order Now</a>
-  <section id="order">
+  <div class="plan-body">
+    <p>RAM: 12GB</p>
+    <p>CPU: 250%</p>
+    <p>Storage: 30GB SSD</p>
+    <p>Players: 35–40</p>
+    <p>Best for: Large SMP</p>
+    <div class="price">₹270 / month</div>
+    <button class="order-btn">Order Now</button>
+  </div>
 </div>
 
-<div class="plan">
+<div class="plan-card" onclick="togglePlan(this)">
   <h2>Diamond Plan</h2>
-  <p>RAM: 16GB</p>
-  <p>CPU: 300%</p>
-  <p>Storage: 40GB SSD</p>
-  <p>Players: 50–60</p>
-  <p>Best for: Large SMP</p>
-  <span>₹350 / month</span>
-  <a href="#order" class="order-btn">Order Now</a>
-  <section id="order">
+  <div class="plan-body">
+    <p>RAM: 16GB</p>
+    <p>CPU: 300%</p>
+    <p>Storage: 40GB SSD</p>
+    <p>Players: 50–60</p>
+    <p>Best for: Large SMP</p>
+    <div class="price">₹350 / month</div>
+    <button class="order-btn">Order Now</button>
+  </div>
 </div>
 
-<div class="plan">
+<div class="plan-card" onclick="togglePlan(this)">
   <h2>Netherite Plan</h2>
-  <p>RAM: 24GB</p>
-  <p>CPU: 400%</p>
-  <p>Storage: 50GB SSD</p>
-  <p>Players: 70–80</p>
-  <p>Best for: Large SMP</p>
-  <span>₹500 / month</span>
-  <a href="#order" class="order-btn">Order Now</a>
-  <section id="order">
+  <div class="plan-body">
+    <p>RAM: 24GB</p>
+    <p>CPU: 400%</p>
+    <p>Storage: 50GB SSD</p>
+    <p>Players: 70–80</p>
+    <p>Best for: Large SMP</p>
+    <div class="price">₹500 / month</div>
+    <button class="order-btn">Order Now</button>
+  </div>
 </div>
 
-</section>
-
-<!-- ORDER SECTION -->
-<section id="order" style="padding:40px;text-align:center;">
-  <h2 style="color:#ffd000;">📩 Order Process</h2>
-  <p>Payment via UPI / QR Scanner</p>
-  <p>After payment, send screenshot on Discord</p>
-  <p><b>Discord:</b> discord.gg/yourserver</p>
-</section>
-
-<footer>
-© 2026 NeonMine Hoisting • All Rights Reserved
-</footer>
-
-</body>
-  </html>
+      </section>
