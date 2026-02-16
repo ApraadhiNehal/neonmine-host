@@ -1,48 +1,55 @@
-<section class="plans">
-  <h2 class="glow">NeonMine Host</h2>
-  <p>Select Your Hosting Plan</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NeonMine Host</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
 
-  <!-- Tabs -->
-  <div class="plan-tabs">
-    <button class="tab-btn active" onclick="showPlans('budget', this)">Minecraft Budget</button>
-    <button class="tab-btn" onclick="showPlans('power', this)">Power Plans</button>
-    <button class="tab-btn" onclick="showPlans('offer', this)">Limited Offer</button>
-  </div>
+<body>
 
-  <!-- Budget Plans -->
-  <div id="budget" class="plan-group active-group">
-    <h3>Dirt Plan</h3>
-    <p>₹70 / month</p>
+<h1 class="glow">NeonMine Host</h1>
+<p>Select Your Hosting Plan</p>
 
-    <h3>Stone Plan</h3>
-    <p>₹130 / month</p>
-  </div>
+<div class="plan-tabs">
+  <button class="tab-btn active" onclick="show('budget', this)">Minecraft Budget</button>
+  <button class="tab-btn" onclick="show('power', this)">Power Plans</button>
+  <button class="tab-btn" onclick="show('offer', this)">Limited Offer</button>
+</div>
 
-  <!-- Power Plans -->
-  <div id="power" class="plan-group">
-    <h3>Iron Plan</h3>
-    <p>₹180 / month</p>
+<!-- Budget -->
+<div id="budget" class="plan-group show">
+  <h2>Dirt Plan</h2>
+  <p>₹70 / month</p>
 
-    <h3>Gold Plan</h3>
-    <p>₹270 / month</p>
-  </div>
+  <h2>Stone Plan</h2>
+  <p>₹130 / month</p>
+</div>
 
-  <!-- Limited Offer -->
-  <div id="offer" class="plan-group">
-    <h3>🔥 Netherite Special</h3>
-    <p>₹500 / month</p>
-  </div>
-</section>
+<!-- Power -->
+<div id="power" class="plan-group">
+  <h2>Iron Plan</h2>
+  <p>₹180 / month</p>
+
+  <h2>Gold Plan</h2>
+  <p>₹270 / month</p>
+</div>
+
+<!-- Offer -->
+<div id="offer" class="plan-group">
+  <h2>🔥 Netherite Special</h2>
+  <p>₹500 / month</p>
+</div>
 
 <script>
-function showPlans(type, btn) {
-  let groups = document.querySelectorAll('.plan-group');
-  let buttons = document.querySelectorAll('.tab-btn');
-
-  groups.forEach(g => g.style.display = "none");
-  buttons.forEach(b => b.classList.remove("active"));
-
-  document.getElementById(type).style.display = "block";
-  btn.classList.add("active");
+function show(id, btn) {
+  document.querySelectorAll('.plan-group').forEach(p => p.classList.remove('show'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById(id).classList.add('show');
+  btn.classList.add('active');
 }
 </script>
+
+</body>
+</html>
