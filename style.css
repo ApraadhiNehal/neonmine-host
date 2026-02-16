@@ -158,3 +158,36 @@ color:#aaa;
 html{
   scroll-behavior:smooth;
 }
+.plan-card{
+  border:2px solid #ffd000;
+  border-radius:15px;
+  padding:15px;
+  margin-bottom:20px;
+  cursor:pointer;
+  box-shadow:0 0 20px #ffd00055;
+}
+
+.plan-card h2{
+  color:#ffd000;
+  text-align:center;
+}
+
+.plan-body{
+  display:none;
+  margin-top:15px;
+  text-align:center;
+}
+
+.plan-card.active .plan-body{
+  display:block;
+}
+
+.order-btn{
+  margin-top:10px;
+  padding:10px 20px;
+  background:#ffd000;
+  color:#000;
+  border:none;
+  border-radius:10px;
+  font-weight:bold;
+  }
