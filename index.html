@@ -154,6 +154,11 @@ function togglePlan(plan){
   plan.classList.toggle('active');
 }
 </script>
-
+<script>
+function orderNow(plan){
+  alert("You selected: " + plan + "\nScroll down to complete payment");
+  document.getElementById("order").scrollIntoView({behavior:"smooth"});
+}
+</script>
 </body>
                    </html>
