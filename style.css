@@ -136,9 +136,22 @@ color:#aaa;
 .plan *{
   pointer-events:auto;
   }
-<section id="order" style="text-align:center; padding:40px;">
-  <h2 style="color:#ffd000">📦 Order Process</h2>
-  <p>Payment via UPI / QR Scanner</p>
-  <p>After payment, join Discord</p>
-  <p><b>Discord:</b> discord.gg/yourserver</p>
-</section>
+.order-btn{
+  display:inline-block;
+  margin-top:12px;
+  padding:10px 22px;
+  background:#ffd000;
+  color:#000;
+  font-weight:bold;
+  border-radius:10px;
+  text-decoration:none;
+  box-shadow:0 0 15px #ffd000;
+}
+
+.plan{
+  pointer-events:auto;
+}
+
+.plan *{
+  pointer-events:auto;
+}
