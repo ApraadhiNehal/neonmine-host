@@ -1,71 +1,131 @@
-body {
+* {
   margin: 0;
-  background: black;
-  color: white;
+  padding: 0;
+  box-sizing: border-box;
   font-family: Arial, sans-serif;
+}
+
+body {
+  background: #000;
+  color: #fff;
   text-align: center;
 }
 
-.glow {
-  color: yellow;
-  text-shadow: 0 0 10px yellow, 0 0 20px yellow;
+header {
+  padding: 40px 20px;
 }
 
-.subtitle {
-  opacity: 0.8;
+header h1 {
+  font-size: 3rem;
+  color: #ffd700;
+  text-shadow: 0 0 15px #ffd700;
+}
+
+header span {
+  color: #000;
+  background: #ffd700;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  padding: 20px;
+}
+
+.feature {
+  border: 1px solid #ffd700;
+  padding: 10px 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #ffd700;
 }
 
 .tabs {
-  margin: 20px 0;
+  margin: 30px 0;
 }
 
 .tab {
-  background: black;
-  color: yellow;
-  border: 2px solid yellow;
-  padding: 10px 16px;
+  background: transparent;
+  color: #ffd700;
+  border: 2px solid #ffd700;
+  padding: 10px 18px;
   margin: 5px;
   cursor: pointer;
-  border-radius: 6px;
-  font-weight: bold;
+  border-radius: 8px;
 }
 
 .tab.active {
-  background: yellow;
-  color: black;
+  background: #ffd700;
+  color: #000;
+  box-shadow: 0 0 15px #ffd700;
 }
 
 .plans {
   display: none;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
+  padding: 20px;
 }
 
 .plans.active {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
 }
 
 .card {
-  border: 2px solid yellow;
-  border-radius: 10px;
+  border: 2px solid #ffd700;
+  border-radius: 12px;
   padding: 20px;
-  width: 220px;
-  background: #000;
-  box-shadow: 0 0 10px yellow;
+  box-shadow: 0 0 20px rgba(255,215,0,0.4);
 }
 
-.card.special {
-  box-shadow: 0 0 20px yellow;
+.card h2 {
+  margin-bottom: 10px;
+  color: #ffd700;
 }
 
-.order {
-  margin-top: 10px;
-  padding: 8px 14px;
+.card ul {
+  list-style: none;
+  margin: 15px 0;
+}
+
+.card li {
+  margin: 6px 0;
+}
+
+.price {
+  font-size: 1.3rem;
+  color: #ffd700;
+}
+
+.card button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #ffd700;
+  color: #000;
   border: none;
-  border-radius: 5px;
-  background: yellow;
-  color: black;
-  font-weight: bold;
+  border-radius: 8px;
   cursor: pointer;
+}
+
+.highlight {
+  box-shadow: 0 0 30px #ffd700;
+}
+
+.offer {
+  background: rgba(255,215,0,0.08);
+}
+
+.coming {
+  font-size: 1.5rem;
+  padding: 40px;
+  color: #ffd700;
+}
+
+footer {
+  margin: 40px 0;
+  font-size: 0.9rem;
+  opacity: 0.8;
 }
