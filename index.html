@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NeonMine Hoisting</title>
 <link rel="stylesheet" href="style.css">
 </head>
@@ -9,126 +10,145 @@
 
 <header>
   <h1>⚡ NeonMine Hoisting</h1>
-  <p>Affordable • Fast • Secure Minecraft Hosting</p>
+  <p>Affordable & Powerful Minecraft Hosting</p>
 </header>
 
+<section class="features">
+  <div>🟢 99.9% Uptime</div>
+  <div>🛡 DDoS Protection</div>
+  <div>⚡ Instant Setup</div>
+  <div>💾 No Data Loss</div>
+  <div>🚀 Stable Performance</div>
+</section>
+
 <section class="tabs">
-  <button onclick="openTab('budget')">Minecraft Budget Plans</button>
-  <button onclick="openTab('power')">Power Plans</button>
+  <button onclick="openTab('budget')" class="active">Minecraft Budget</button>
+  <button onclick="openTab('power')">Power Plan</button>
   <button onclick="openTab('offer')">Limited Offer</button>
 </section>
 
 <!-- ================= BUDGET PLANS ================= -->
-<section id="budget" class="plans active">
+<section id="budget" class="tab-content active">
 
-<div class="plan">
+<div class="plan" onclick="togglePlan(this)">
 <h2>Dirt Plan</h2>
-<ul>
-<li>RAM: 4GB</li>
-<li>CPU: 100%</li>
-<li>Storage: 10GB SSD</li>
-<li>Players: 10–15</li>
-<li>Best for: Friends SMP</li>
-</ul>
-<p class="price">₹70 / month</p>
-<a class="order" href="https://discord.gg/YOURSERVER" target="_blank">Order Now</a>
+<div class="details">
+<p>RAM: 4GB</p>
+<p>CPU: 100%</p>
+<p>Storage: 10GB SSD</p>
+<p>Players: 10–15</p>
+<p>Best for: Friends SMP</p>
+<span>₹70 / month</span>
+<button>Order Now</button>
+</div>
 </div>
 
-<div class="plan">
+<div class="plan" onclick="togglePlan(this)">
 <h2>Stone Plan</h2>
-<ul>
-<li>RAM: 6GB</li>
-<li>CPU: 150%</li>
-<li>Storage: 15GB SSD</li>
-<li>Players: 20–25</li>
-<li>Best for: Plugin Servers</li>
-</ul>
-<p class="price">₹130 / month</p>
-<a class="order" href="https://discord.gg/YOURSERVER" target="_blank">Order Now</a>
+<div class="details">
+<p>RAM: 6GB</p>
+<p>CPU: 150%</p>
+<p>Storage: 15GB SSD</p>
+<p>Players: 20–25</p>
+<p>Best for: Plugin Servers</p>
+<span>₹130 / month</span>
+<button>Order Now</button>
+</div>
 </div>
 
-<div class="plan">
+<div class="plan" onclick="togglePlan(this)">
 <h2>Iron Plan</h2>
-<ul>
-<li>RAM: 8GB</li>
-<li>CPU: 200%</li>
-<li>Storage: 20GB SSD</li>
-<li>Players: 25–30</li>
-<li>Best for: Semi-Modded</li>
-</ul>
-<p class="price">₹180 / month</p>
-<a class="order" href="https://discord.gg/YOURSERVER" target="_blank">Order Now</a>
+<div class="details">
+<p>RAM: 8GB</p>
+<p>CPU: 200%</p>
+<p>Storage: 20GB SSD</p>
+<p>Players: 25–30</p>
+<p>Best for: Semi-Modded</p>
+<span>₹180 / month</span>
+<button>Order Now</button>
+</div>
 </div>
 
-<div class="plan">
+<div class="plan" onclick="togglePlan(this)">
 <h2>Gold Plan</h2>
-<ul>
-<li>RAM: 12GB</li>
-<li>CPU: 250%</li>
-<li>Storage: 30GB SSD</li>
-<li>Players: 35–40</li>
-<li>Best for: Large SMP</li>
-</ul>
-<p class="price">₹270 / month</p>
-<a class="order" href="https://discord.gg/YOURSERVER" target="_blank">Order Now</a>
+<div class="details">
+<p>RAM: 12GB</p>
+<p>CPU: 250%</p>
+<p>Storage: 30GB SSD</p>
+<p>Players: 35–40</p>
+<p>Best for: Large SMP</p>
+<span>₹270 / month</span>
+<button>Order Now</button>
+</div>
 </div>
 
-<div class="plan">
+<div class="plan" onclick="togglePlan(this)">
 <h2>Diamond Plan</h2>
-<ul>
-<li>RAM: 16GB</li>
-<li>CPU: 300%</li>
-<li>Storage: 40GB SSD</li>
-<li>Players: 50–60</li>
-</ul>
-<p class="price">₹350 / month</p>
-<a class="order" href="https://discord.gg/YOURSERVER" target="_blank">Order Now</a>
+<div class="details">
+<p>RAM: 16GB</p>
+<p>CPU: 300%</p>
+<p>Storage: 40GB SSD</p>
+<p>Players: 50–60</p>
+<p>Best for: Large SMP</p>
+<span>₹350 / month</span>
+<button>Order Now</button>
+</div>
 </div>
 
-<div class="plan">
+<div class="plan" onclick="togglePlan(this)">
 <h2>Netherite Plan</h2>
-<ul>
-<li>RAM: 24GB</li>
-<li>CPU: 400%</li>
-<li>Storage: 50GB SSD</li>
-<li>Players: 70–80</li>
-</ul>
-<p class="price">₹500 / month</p>
-<a class="order" href="https://discord.gg/YOURSERVER" target="_blank">Order Now</a>
+<div class="details">
+<p>RAM: 24GB</p>
+<p>CPU: 400%</p>
+<p>Storage: 50GB SSD</p>
+<p>Players: 70–80</p>
+<p>Best for: Large SMP</p>
+<span>₹500 / month</span>
+<button>Order Now</button>
+</div>
 </div>
 
 </section>
 
-<!-- ================= POWER PLAN ================= -->
-<section id="power" class="plans">
-<h2 class="coming">🚀 Power Plans – Coming Soon</h2>
+<!-- ================= POWER ================= -->
+<section id="power" class="tab-content">
+<h2 class="coming">🚀 Power Plans Coming Soon</h2>
 </section>
 
-<!-- ================= LIMITED OFFER ================= -->
-<section id="offer" class="plans">
-<div class="plan highlight">
-<h2>IRON PLAN – SPECIAL OFFER</h2>
-<ul>
-<li>RAM: 12GB DDR4</li>
-<li>Storage: 40GB NVMe</li>
-<li>CPU: 250%</li>
-<li>Cloud Backups: 2×</li>
-</ul>
-<p class="price"><del>₹270</del> ₹230 / month</p>
-<a class="order" href="https://discord.gg/YOURSERVER" target="_blank">Order Now</a>
+<!-- ================= OFFER ================= -->
+<section id="offer" class="tab-content">
+<div class="plan active">
+<h2>🔥 IRON PLAN – SPECIAL OFFER</h2>
+<div class="details show">
+<p>RAM: 12GB DDR4</p>
+<p>Storage: 40GB NVMe</p>
+<p>CPU: 250%</p>
+<p>Cloud Backups: 2×</p>
+<span><del>₹270</del> ₹230 / month</span>
+<button>Order Now</button>
+</div>
 </div>
 </section>
 
 <footer>
-<p>✔ DDoS Protection | ✔ 99.9% Uptime | ✔ Fast Setup | ✔ No Data Loss</p>
+© 2026 NeonMine Hoisting • All Rights Reserved
 </footer>
 
 <script>
-function openTab(tabId){
-  document.querySelectorAll('.plans').forEach(p => p.classList.remove('active'));
-  document.getElementById(tabId).classList.add('active');
+function openTab(tab){
+  document.querySelectorAll('.tab-content').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('.tabs button').forEach(b=>b.classList.remove('active'));
+  document.getElementById(tab).classList.add('active');
+  event.target.classList.add('active');
+}
+
+function togglePlan(plan){
+  document.querySelectorAll('.plan').forEach(p=>{
+    if(p!==plan) p.classList.remove('active');
+  });
+  plan.classList.toggle('active');
 }
 </script>
 
 </body>
-  </html>
+</html>
