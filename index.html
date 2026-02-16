@@ -1,147 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>NeonMine Hoisting</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>NeonMine Hoisting</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-  <h1>⚡ NeonMine <span>Hoisting</span></h1>
-  <p>Affordable & Powerful Minecraft Hoisting</p>
+  <h1>⚡ NeonMine Hoisting</h1>
+  <p>Affordable • Fast • Secure Minecraft Hosting</p>
 </header>
 
-<section class="features">
-  <div class="feature">🟢 99.9% Uptime</div>
-  <div class="feature">🛡️ DDoS Protection</div>
-  <div class="feature">⚡ Instant Setup</div>
-  <div class="feature">💾 No Data Loss</div>
-  <div class="feature">🚀 Stable Performance</div>
+<section class="tabs">
+  <button onclick="openTab('budget')">Minecraft Budget Plans</button>
+  <button onclick="openTab('power')">Power Plans</button>
+  <button onclick="openTab('offer')">Limited Offer</button>
 </section>
-
-<div class="tabs">
-  <button class="tab active" onclick="showPlan('budget', this)">Minecraft Budget</button>
-  <button class="tab" onclick="showPlan('power', this)">Power Plan</button>
-  <button class="tab" onclick="showPlan('offer', this)">Limited Offer</button>
-</div>
 
 <!-- ================= BUDGET PLANS ================= -->
 <section id="budget" class="plans active">
 
-  <!-- CARD -->
-  <div class="card">
-    <h2 onclick="togglePlan(this.parentElement)">Dirt Plan</h2>
-    <div class="plan-details">
-      <ul>
-        <li>RAM: 4GB</li>
-        <li>CPU: 100%</li>
-        <li>Storage: 10GB SSD</li>
-        <li>Players: 10–15</li>
-        <li>Best for: Friends SMP</li>
-      </ul>
-      <span class="price">₹70 / month</span>
-      <button class="order-btn" onclick="openPayment(); event.stopPropagation();">
-        Order Now
-      </button>
-    </div>
-  </div>
-
-  <div class="card">
-    <h2 onclick="togglePlan(this.parentElement)">Stone Plan</h2>
-    <div class="plan-details">
-      <ul>
-        <li>RAM: 6GB</li>
-        <li>CPU: 150%</li>
-        <li>Storage: 15GB SSD</li>
-        <li>Players: 20–25</li>
-        <li>Best for: Plugin Servers</li>
-      </ul>
-      <span class="price">₹130 / month</span>
-      <button class="order-btn" onclick="openPayment(); event.stopPropagation();">
-        Order Now
-      </button>
-    </div>
-  </div>
-
-  <div class="card highlight">
-    <h2 onclick="togglePlan(this.parentElement)">Netherite Plan</h2>
-    <div class="plan-details">
-      <ul>
-        <li>RAM: 24GB</li>
-        <li>CPU: 400%</li>
-        <li>Storage: 50GB SSD</li>
-        <li>Players: 70–80</li>
-        <li>Best for: Mega SMP</li>
-      </ul>
-      <span class="price">₹500 / month</span>
-      <button class="order-btn" onclick="openPayment(); event.stopPropagation();">
-        Order Now
-      </button>
-    </div>
-  </div>
-
-</section>
-
-<section id="power" class="plans">
-  <div class="coming">🚧 Power Plans Coming Soon 🚧</div>
-</section>
-
-<section id="offer" class="plans">
-  <div class="card">
-    <h2 onclick="togglePlan(this.parentElement)">IRON PLAN – SPECIAL OFFER</h2>
-    <div class="plan-details">
-      <ul>
-        <li>RAM: 12GB DDR4</li>
-        <li>CPU: 250%</li>
-        <li>Storage: 40GB NVMe</li>
-        <li>Cloud Backups: 2×</li>
-      </ul>
-      <span class="price"><del>₹270</del> ₹230 / month</span>
-      <button class="order-btn" onclick="openPayment(); event.stopPropagation();">
-        Grab Offer
-      </button>
-    </div>
-  </div>
-</section>
-
-<!-- ================= PAYMENT POPUP ================= -->
-<div id="paymentPopup" class="popup">
-  <div class="popup-content">
-    <span class="close" onclick="closePayment()">×</span>
-    <h2>Scan & Pay</h2>
-    <img src="upi-qr.png" alt="UPI QR" class="qr">
-    <p>Payment ke baad screenshot Discord / WhatsApp pe bheje</p>
-    <p class="note">⚠️ We never ask for UPI PIN</p>
-  </div>
+<div class="plan">
+<h2>Dirt Plan</h2>
+<ul>
+<li>RAM: 4GB</li>
+<li>CPU: 100%</li>
+<li>Storage: 10GB SSD</li>
+<li>Players: 10–15</li>
+<li>Best for: Friends SMP</li>
+</ul>
+<p class="price">₹70 / month</p>
+<a class="order" href="https://discord.gg/YOURSERVER" target="_blank">Order Now</a>
 </div>
 
+<div class="plan">
+<h2>Stone Plan</h2>
+<ul>
+<li>RAM: 6GB</li>
+<li>CPU: 150%</li>
+<li>Storage: 15GB SSD</li>
+<li>Players: 20–25</li>
+<li>Best for: Plugin Servers</li>
+</ul>
+<p class="price">₹130 / month</p>
+<a class="order" href="https://discord.gg/YOURSERVER" target="_blank">Order Now</a>
+</div>
+
+<div class="plan">
+<h2>Iron Plan</h2>
+<ul>
+<li>RAM: 8GB</li>
+<li>CPU: 200%</li>
+<li>Storage: 20GB SSD</li>
+<li>Players: 25–30</li>
+<li>Best for: Semi-Modded</li>
+</ul>
+<p class="price">₹180 / month</p>
+<a class="order" href="https://discord.gg/YOURSERVER" target="_blank">Order Now</a>
+</div>
+
+<div class="plan">
+<h2>Gold Plan</h2>
+<ul>
+<li>RAM: 12GB</li>
+<li>CPU: 250%</li>
+<li>Storage: 30GB SSD</li>
+<li>Players: 35–40</li>
+<li>Best for: Large SMP</li>
+</ul>
+<p class="price">₹270 / month</p>
+<a class="order" href="https://discord.gg/YOURSERVER" target="_blank">Order Now</a>
+</div>
+
+<div class="plan">
+<h2>Diamond Plan</h2>
+<ul>
+<li>RAM: 16GB</li>
+<li>CPU: 300%</li>
+<li>Storage: 40GB SSD</li>
+<li>Players: 50–60</li>
+</ul>
+<p class="price">₹350 / month</p>
+<a class="order" href="https://discord.gg/YOURSERVER" target="_blank">Order Now</a>
+</div>
+
+<div class="plan">
+<h2>Netherite Plan</h2>
+<ul>
+<li>RAM: 24GB</li>
+<li>CPU: 400%</li>
+<li>Storage: 50GB SSD</li>
+<li>Players: 70–80</li>
+</ul>
+<p class="price">₹500 / month</p>
+<a class="order" href="https://discord.gg/YOURSERVER" target="_blank">Order Now</a>
+</div>
+
+</section>
+
+<!-- ================= POWER PLAN ================= -->
+<section id="power" class="plans">
+<h2 class="coming">🚀 Power Plans – Coming Soon</h2>
+</section>
+
+<!-- ================= LIMITED OFFER ================= -->
+<section id="offer" class="plans">
+<div class="plan highlight">
+<h2>IRON PLAN – SPECIAL OFFER</h2>
+<ul>
+<li>RAM: 12GB DDR4</li>
+<li>Storage: 40GB NVMe</li>
+<li>CPU: 250%</li>
+<li>Cloud Backups: 2×</li>
+</ul>
+<p class="price"><del>₹270</del> ₹230 / month</p>
+<a class="order" href="https://discord.gg/YOURSERVER" target="_blank">Order Now</a>
+</div>
+</section>
+
 <footer>
-  © 2026 NeonMine Hoisting • All Rights Reserved
+<p>✔ DDoS Protection | ✔ 99.9% Uptime | ✔ Fast Setup | ✔ No Data Loss</p>
 </footer>
 
 <script>
-function showPlan(plan, btn) {
+function openTab(tabId){
   document.querySelectorAll('.plans').forEach(p => p.classList.remove('active'));
-  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-  document.getElementById(plan).classList.add('active');
-  btn.classList.add('active');
-}
-
-function togglePlan(card) {
-  document.querySelectorAll('.card').forEach(c => {
-    if (c !== card) c.classList.remove('active');
-  });
-  card.classList.toggle('active');
-}
-
-function openPayment() {
-  document.getElementById("paymentPopup").style.display = "block";
-}
-
-function closePayment() {
-  document.getElementById("paymentPopup").style.display = "none";
+  document.getElementById(tabId).classList.add('active');
 }
 </script>
 
