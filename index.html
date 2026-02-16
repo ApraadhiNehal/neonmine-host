@@ -2,86 +2,47 @@
   <h2 class="glow">NeonMine Host</h2>
   <p>Select Your Hosting Plan</p>
 
-  <!-- Buttons -->
+  <!-- Tabs -->
   <div class="plan-tabs">
-    <button class="tab-btn active" onclick="showPlans('budget')">
-      Minecraft Budget
-    </button>
-    <button class="tab-btn" onclick="showPlans('power')">
-      Power Plans
-    </button>
-    <button class="tab-btn" onclick="showPlans('offer')">
-      Limited Offer
-    </button>
+    <button class="tab-btn active" onclick="showPlans('budget', this)">Minecraft Budget</button>
+    <button class="tab-btn" onclick="showPlans('power', this)">Power Plans</button>
+    <button class="tab-btn" onclick="showPlans('offer', this)">Limited Offer</button>
   </div>
 
-  <!-- ===== Budget Plans ===== -->
+  <!-- Budget Plans -->
   <div id="budget" class="plan-group active-group">
+    <h3>Dirt Plan</h3>
+    <p>₹70 / month</p>
 
-    <div class="plan-box">
-      <h3>Dirt Plan</h3>
-      <p class="price">₹70 / month</p>
-      <ul>
-        <li>RAM: 4GB</li>
-        <li>CPU: 100%</li>
-        <li>Storage: 10GB SSD</li>
-        <li>Players: 10–15</li>
-        <li>Best for: Friends SMP</li>
-      </ul>
-      <button>Order Now</button>
-    </div>
-
-    <div class="plan-box">
-      <h3>Stone Plan</h3>
-      <p class="price">₹130 / month</p>
-      <ul>
-        <li>RAM: 6GB</li>
-        <li>CPU: 150%</li>
-        <li>Storage: 15GB SSD</li>
-        <li>Players: 20–25</li>
-        <li>Best for: Plugin Servers</li>
-      </ul>
-      <button>Order Now</button>
-    </div>
-
+    <h3>Stone Plan</h3>
+    <p>₹130 / month</p>
   </div>
 
-  <!-- ===== Power Plans ===== -->
+  <!-- Power Plans -->
   <div id="power" class="plan-group">
+    <h3>Iron Plan</h3>
+    <p>₹180 / month</p>
 
-    <div class="plan-box">
-      <h3>Iron Plan</h3>
-      <p class="price">₹180 / month</p>
-      <ul>
-        <li>RAM: 8GB</li>
-        <li>CPU: 200%</li>
-        <li>Storage: 20GB SSD</li>
-        <li>Players: 25–30</li>
-        <li>Best for: Semi-Modded</li>
-      </ul>
-      <button>Order Now</button>
-    </div>
-
-    <div class="plan-box">
-      <h3>Gold Plan</h3>
-      <p class="price">₹270 / month</p>
-      <ul>
-        <li>RAM: 12GB</li>
-        <li>CPU: 250%</li>
-        <li>Storage: 30GB SSD</li>
-        <li>Players: 35–40</li>
-        <li>Best for: Large SMP</li>
-      </ul>
-      <button>Order Now</button>
-    </div>
-
+    <h3>Gold Plan</h3>
+    <p>₹270 / month</p>
   </div>
 
-  <!-- ===== Limited Offer ===== -->
+  <!-- Limited Offer -->
   <div id="offer" class="plan-group">
+    <h3>🔥 Netherite Special</h3>
+    <p>₹500 / month</p>
+  </div>
+</section>
 
-    <div class="plan-box">
-      <h3>🔥 Netherite Special</h3>
-      <p class="price">₹500 / month</p>
-      <ul>
-        <li
+<script>
+function showPlans(type, btn) {
+  let groups = document.querySelectorAll('.plan-group');
+  let buttons = document.querySelectorAll('.tab-btn');
+
+  groups.forEach(g => g.style.display = "none");
+  buttons.forEach(b => b.classList.remove("active"));
+
+  document.getElementById(type).style.display = "block";
+  btn.classList.add("active");
+}
+</script>
