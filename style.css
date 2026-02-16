@@ -116,3 +116,23 @@ text-align:center;
 padding:15px;
 color:#aaa;
 }
+.order-btn{
+  display:inline-block;
+  margin-top:12px;
+  padding:10px 22px;
+  background:#ffd000;
+  color:#000;
+  font-weight:bold;
+  border-radius:10px;
+  text-decoration:none;
+  box-shadow:0 0 15px #ffd000;
+}
+
+/* 🔥 THIS FIXES CLICK ISSUE */
+.plan{
+  pointer-events:auto;
+}
+
+.plan *{
+  pointer-events:auto;
+  }
