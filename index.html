@@ -2,136 +2,146 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>NeonMine Host</title>
-  <link rel="stylesheet" href="style.css">
+  <title>NeonMine Hosting</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-  <h1>⚡ NeonMine <span>Host</span></h1>
+  <h1>⚡ NeonMine <span>Hosting</span></h1>
   <p>Affordable & Powerful Minecraft Hosting</p>
 </header>
 
-<!-- FEATURES -->
 <section class="features">
-  <div class="feature">🟢 99.9% Uptime Guarantee</div>
-  <div class="feature">🛡️ Advanced DDoS Protection</div>
-  <div class="feature">⚡ Instant Server Setup</div>
-  <div class="feature">💾 No Data Loss Guarantee</div>
-  <div class="feature">🚀 Stable High Performance</div>
+  <div class="feature">🟢 99.9% Uptime</div>
+  <div class="feature">🛡️ DDoS Protection</div>
+  <div class="feature">⚡ Instant Setup</div>
+  <div class="feature">💾 No Data Loss</div>
+  <div class="feature">🚀 Stable Performance</div>
 </section>
 
-<!-- TABS -->
 <div class="tabs">
   <button class="tab active" onclick="showPlan('budget', this)">Minecraft Budget</button>
   <button class="tab" onclick="showPlan('power', this)">Power Plan</button>
   <button class="tab" onclick="showPlan('offer', this)">Limited Offer</button>
 </div>
 
-<!-- BUDGET PLANS -->
+<!-- ================= BUDGET PLANS ================= -->
 <section id="budget" class="plans active">
-  <div class="card">
+
+  <div class="card" onclick="togglePlan(this)">
     <h2>Dirt Plan</h2>
-    <ul>
-      <li>RAM: 4GB</li>
-      <li>CPU: 100%</li>
-      <li>Storage: 10GB SSD</li>
-      <li>Players: 10–15</li>
-      <li>Best for: Friends SMP</li>
-    </ul>
-    <span class="price">₹70 / month</span>
-    <button>Order Now</button>
+    <div class="plan-details">
+      <ul>
+        <li>RAM: 4GB</li>
+        <li>CPU: 100%</li>
+        <li>Storage: 10GB SSD</li>
+        <li>Players: 10–15</li>
+        <li>Best for: Friends SMP</li>
+      </ul>
+      <span class="price">₹70 / month</span>
+      <button>Order Now</button>
+    </div>
   </div>
 
-  <div class="card">
+  <div class="card" onclick="togglePlan(this)">
     <h2>Stone Plan</h2>
-    <ul>
-      <li>RAM: 6GB</li>
-      <li>CPU: 150%</li>
-      <li>Storage: 15GB SSD</li>
-      <li>Players: 20–25</li>
-      <li>Best for: Plugin Servers</li>
-    </ul>
-    <span class="price">₹130 / month</span>
-    <button>Order Now</button>
+    <div class="plan-details">
+      <ul>
+        <li>RAM: 6GB</li>
+        <li>CPU: 150%</li>
+        <li>Storage: 15GB SSD</li>
+        <li>Players: 20–25</li>
+        <li>Best for: Plugin Servers</li>
+      </ul>
+      <span class="price">₹130 / month</span>
+      <button>Order Now</button>
+    </div>
   </div>
 
-  <div class="card">
+  <div class="card" onclick="togglePlan(this)">
     <h2>Iron Plan</h2>
-    <ul>
-      <li>RAM: 8GB</li>
-      <li>CPU: 200%</li>
-      <li>Storage: 20GB SSD</li>
-      <li>Players: 25–30</li>
-      <li>Best for: Semi-Modded</li>
-    </ul>
-    <span class="price">₹180 / month</span>
-    <button>Order Now</button>
+    <div class="plan-details">
+      <ul>
+        <li>RAM: 8GB</li>
+        <li>CPU: 200%</li>
+        <li>Storage: 20GB SSD</li>
+        <li>Players: 25–30</li>
+        <li>Best for: Semi-Modded</li>
+      </ul>
+      <span class="price">₹180 / month</span>
+      <button>Order Now</button>
+    </div>
   </div>
 
-  <div class="card">
+  <div class="card" onclick="togglePlan(this)">
     <h2>Gold Plan</h2>
-    <ul>
-      <li>RAM: 12GB</li>
-      <li>CPU: 250%</li>
-      <li>Storage: 30GB SSD</li>
-      <li>Players: 35–40</li>
-      <li>Best for: Large SMP</li>
-    </ul>
-    <span class="price">₹270 / month</span>
-    <button>Order Now</button>
+    <div class="plan-details">
+      <ul>
+        <li>RAM: 12GB</li>
+        <li>CPU: 250%</li>
+        <li>Storage: 30GB SSD</li>
+        <li>Players: 35–40</li>
+        <li>Best for: Large SMP</li>
+      </ul>
+      <span class="price">₹270 / month</span>
+      <button>Order Now</button>
+    </div>
   </div>
 
-  <div class="card">
+  <div class="card" onclick="togglePlan(this)">
     <h2>Diamond Plan</h2>
-    <ul>
-      <li>RAM: 16GB</li>
-      <li>CPU: 300%</li>
-      <li>Storage: 40GB SSD</li>
-      <li>Players: 50–60</li>
-      <li>Best for: Large SMP</li>
-    </ul>
-    <span class="price">₹350 / month</span>
-    <button>Order Now</button>
+    <div class="plan-details">
+      <ul>
+        <li>RAM: 16GB</li>
+        <li>CPU: 300%</li>
+        <li>Storage: 40GB SSD</li>
+        <li>Players: 50–60</li>
+        <li>Best for: Large SMP</li>
+      </ul>
+      <span class="price">₹350 / month</span>
+      <button>Order Now</button>
+    </div>
   </div>
 
-  <div class="card highlight">
+  <div class="card highlight" onclick="togglePlan(this)">
     <h2>Netherite Plan</h2>
-    <ul>
-      <li>RAM: 24GB</li>
-      <li>CPU: 400%</li>
-      <li>Storage: 50GB SSD</li>
-      <li>Players: 70–80</li>
-      <li>Best for: Mega SMP</li>
-    </ul>
-    <span class="price">₹500 / month</span>
-    <button>Order Now</button>
+    <div class="plan-details">
+      <ul>
+        <li>RAM: 24GB</li>
+        <li>CPU: 400%</li>
+        <li>Storage: 50GB SSD</li>
+        <li>Players: 70–80</li>
+        <li>Best for: Mega SMP</li>
+      </ul>
+      <span class="price">₹500 / month</span>
+      <button>Order Now</button>
+    </div>
   </div>
+
 </section>
 
-<!-- POWER PLAN -->
+<!-- ================= POWER PLAN ================= -->
 <section id="power" class="plans">
-  <div class="coming">
-    🚧 Power Plans Coming Soon 🚧
-  </div>
+  <div class="coming">🚧 Power Plans Coming Soon 🚧</div>
 </section>
 
-<!-- LIMITED OFFER -->
+<!-- ================= OFFER ================= -->
 <section id="offer" class="plans">
-  <div class="card offer">
+  <div class="card offer" onclick="togglePlan(this)">
     <h2>IRON PLAN – SPECIAL OFFER</h2>
-    <ul>
-      <li>RAM: 12GB DDR4</li>
-      <li>CPU: 250%</li>
-      <li>Storage: 40GB NVMe</li>
-      <li>Cloud Backups: 2×</li>
-      <li>DDoS Protection</li>
-    </ul>
-    <span class="price">
-      <del>₹270</del> ₹230 / month
-    </span>
-    <button>Grab Offer</button>
+    <div class="plan-details">
+      <ul>
+        <li>RAM: 12GB DDR4</li>
+        <li>CPU: 250%</li>
+        <li>Storage: 40GB NVMe</li>
+        <li>Cloud Backups: 2×</li>
+        <li>DDoS Protection</li>
+      </ul>
+      <span class="price"><del>₹270</del> ₹230 / month</span>
+      <button>Grab Offer</button>
+    </div>
   </div>
 </section>
 
@@ -145,6 +155,13 @@ function showPlan(plan, btn) {
   document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
   document.getElementById(plan).classList.add('active');
   btn.classList.add('active');
+}
+
+function togglePlan(card) {
+  document.querySelectorAll('.card').forEach(c => {
+    if (c !== card) c.classList.remove('active');
+  });
+  card.classList.toggle('active');
 }
 </script>
 
