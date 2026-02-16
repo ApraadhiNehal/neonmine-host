@@ -139,3 +139,42 @@ footer {
   margin: 40px 0;
   opacity: 0.8;
   }
+.payment {
+  margin: 50px auto;
+  padding: 30px 20px;
+  max-width: 400px;
+  border: 2px solid #ffd700;
+  border-radius: 16px;
+  box-shadow: 0 0 25px rgba(255,215,0,0.5);
+}
+
+.payment h2 {
+  color: #ffd700;
+  margin-bottom: 10px;
+}
+
+.pay-sub {
+  font-size: 0.95rem;
+  opacity: 0.85;
+  margin-bottom: 15px;
+}
+
+.payment img {
+  width: 220px;
+  margin: 15px auto;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #ffd700;
+  background: #000;
+}
+
+.pay-info {
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+.pay-warning {
+  margin-top: 8px;
+  font-size: 0.8rem;
+  color: #ffcc00;
+  }
