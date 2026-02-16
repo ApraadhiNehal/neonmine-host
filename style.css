@@ -1,26 +1,29 @@
-/* ===== Tabs ===== */
+body {
+  background: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
 .plan-tabs {
-  margin: 25px 0;
+  margin: 20px 0;
 }
 
 .tab-btn {
   background: black;
   color: yellow;
   border: 2px solid yellow;
-  padding: 10px 18px;
-  margin: 6px;
+  padding: 8px 14px;
+  margin: 5px;
   cursor: pointer;
-  border-radius: 8px;
-  font-weight: bold;
+  border-radius: 6px;
 }
 
-.tab-btn.active,
-.tab-btn:hover {
+.tab-btn.active {
   background: yellow;
   color: black;
 }
 
-/* ===== Plan Groups ===== */
 .plan-group {
   display: none;
 }
