@@ -14,22 +14,46 @@
 }
 
 body{
-  background:#0a0a0a;
+  background:radial-gradient(circle at top,#111,#000);
   color:#fff;
   text-align:center;
 }
 
 /* HEADER */
 header{
-  padding:40px 20px;
+  padding:50px 20px;
 }
 header h1{
-  font-size:2.5rem;
+  font-size:3rem;
   color:#ffcc00;
+  text-shadow:0 0 15px #ffcc00;
 }
 header p{
   color:#aaa;
   margin-top:10px;
+  font-size:15px;
+}
+
+/* SUPPORT BUTTONS */
+.support{
+  margin-top:20px;
+}
+.support a{
+  display:inline-block;
+  margin:8px;
+  padding:10px 18px;
+  border-radius:25px;
+  text-decoration:none;
+  font-size:14px;
+  font-weight:bold;
+}
+.discord{
+  background:#5865F2;
+  color:#fff;
+}
+.whatsapp{
+  background:#25D366;
+  color:#000;
 }
 
 /* TABS */
@@ -37,23 +61,23 @@ header p{
   display:flex;
   justify-content:center;
   gap:15px;
-  margin:30px 0;
+  margin:35px 0;
   flex-wrap:wrap;
 }
 .tabs button{
-  padding:12px 22px;
-  background:#151515;
+  padding:12px 24px;
+  background:#111;
   color:#fff;
   border:1px solid #333;
   cursor:pointer;
-  border-radius:25px;
-  font-size:14px;
+  border-radius:30px;
   transition:0.3s;
 }
 .tabs button:hover,
 .tabs button.active{
   background:#ffcc00;
   color:#000;
+  box-shadow:0 0 15px #ffcc00;
 }
 
 /* SECTIONS */
@@ -70,15 +94,20 @@ header p{
   display:flex;
   justify-content:center;
   flex-wrap:wrap;
-  gap:20px;
+  gap:22px;
 }
 
 .card{
-  background:#111;
+  background:#0f0f0f;
   border:1px solid #333;
   width:260px;
-  padding:20px;
-  border-radius:15px;
+  padding:22px;
+  border-radius:18px;
+  transition:0.3s;
+}
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 0 20px rgba(255,204,0,0.3);
 }
 .card h3{
   color:#ffcc00;
@@ -90,35 +119,51 @@ header p{
   line-height:1.6;
 }
 .price{
-  margin-top:12px;
+  margin:12px 0;
   font-size:18px;
   color:#00ff99;
   font-weight:bold;
+}
+
+/* BUY BUTTON */
+.buy{
+  display:inline-block;
+  margin-top:10px;
+  padding:10px 20px;
+  background:#ffcc00;
+  color:#000;
+  text-decoration:none;
+  font-weight:bold;
+  border-radius:25px;
+  transition:0.3s;
+}
+.buy:hover{
+  box-shadow:0 0 15px #ffcc00;
 }
 
 /* COMING SOON */
 .coming{
   font-size:1.8rem;
   color:#777;
-  padding:60px;
+  padding:70px;
   border:2px dashed #333;
-  border-radius:15px;
+  border-radius:20px;
   max-width:600px;
   margin:auto;
 }
 
 /* OFFER */
 .offer{
-  max-width:500px;
+  max-width:520px;
   margin:auto;
-  background:#111;
+  background:#0f0f0f;
   border:2px solid #ff4444;
-  padding:30px;
-  border-radius:20px;
+  padding:35px;
+  border-radius:25px;
+  box-shadow:0 0 20px rgba(255,68,68,0.4);
 }
 .offer h3{
   color:#ff4444;
-  margin-bottom:10px;
 }
 .old{
   text-decoration:line-through;
@@ -126,20 +171,20 @@ header p{
 }
 .new{
   color:#00ff99;
-  font-size:24px;
+  font-size:26px;
   font-weight:bold;
 }
 .offer ul{
   list-style:none;
-  margin-top:15px;
+  margin-top:18px;
   line-height:1.8;
   font-size:14px;
 }
 
 /* FOOTER */
 footer{
-  margin-top:50px;
-  padding:20px;
+  margin-top:60px;
+  padding:25px;
   color:#666;
   font-size:13px;
 }
@@ -151,6 +196,11 @@ footer{
 <header>
   <h1>⚡ NeonMine Hosting</h1>
   <p>Affordable • Powerful • Reliable Minecraft Hosting</p>
+
+  <div class="support">
+    <a class="discord" href="https://discord.gg/XxanU2YBXw" target="_blank">Join Discord</a>
+    <a class="whatsapp" href="https://wa.me/91XXXXXXXXXX" target="_blank">WhatsApp Support</a>
+  </div>
 </header>
 
 <!-- TABS -->
@@ -160,123 +210,89 @@ footer{
   <button class="tab-btn" onclick="openTab('offer')">Limited Offer</button>
 </div>
 
-<!-- SECTION 1 -->
+<!-- BUDGET -->
 <div id="budget" class="section active">
   <div class="plans">
 
     <div class="card">
       <h3>Dirt Plan</h3>
       <ul>
-        <li>RAM: 4GB</li>
-        <li>CPU: 100%</li>
-        <li>Storage: 10GB SSD</li>
-        <li>Players: 10–15</li>
-        <li>Best for: Friends SMP</li>
+        <li>RAM: 4GB</li><li>CPU: 100%</li><li>10GB SSD</li>
+        <li>Players: 10–15</li><li>Friends SMP</li>
       </ul>
       <div class="price">₹70 / month</div>
+      <a class="buy" href="#">Buy Now</a>
     </div>
 
     <div class="card">
       <h3>Stone Plan</h3>
       <ul>
-        <li>RAM: 6GB</li>
-        <li>CPU: 150%</li>
-        <li>Storage: 15GB SSD</li>
-        <li>Players: 20–25</li>
-        <li>Best for: Plugin Servers</li>
+        <li>RAM: 6GB</li><li>CPU: 150%</li><li>15GB SSD</li>
+        <li>Players: 20–25</li><li>Plugin Servers</li>
       </ul>
       <div class="price">₹130 / month</div>
+      <a class="buy" href="#">Buy Now</a>
     </div>
 
     <div class="card">
       <h3>Iron Plan</h3>
       <ul>
-        <li>RAM: 8GB</li>
-        <li>CPU: 200%</li>
-        <li>Storage: 20GB SSD</li>
-        <li>Players: 25–30</li>
-        <li>Best for: Semi-Modded</li>
+        <li>RAM: 8GB</li><li>CPU: 200%</li><li>20GB SSD</li>
+        <li>Players: 25–30</li><li>Semi-Modded</li>
       </ul>
       <div class="price">₹180 / month</div>
+      <a class="buy" href="#">Buy Now</a>
     </div>
 
     <div class="card">
       <h3>Gold Plan</h3>
       <ul>
-        <li>RAM: 12GB</li>
-        <li>CPU: 250%</li>
-        <li>Storage: 30GB SSD</li>
-        <li>Players: 35–40</li>
-        <li>Best for: Large SMP</li>
+        <li>RAM: 12GB</li><li>CPU: 250%</li><li>30GB SSD</li>
+        <li>Players: 35–40</li><li>Large SMP</li>
       </ul>
       <div class="price">₹270 / month</div>
-    </div>
-
-    <div class="card">
-      <h3>Diamond Plan</h3>
-      <ul>
-        <li>RAM: 16GB</li>
-        <li>CPU: 300%</li>
-        <li>Storage: 40GB SSD</li>
-        <li>Players: 50–60</li>
-        <li>Best for: Large SMP</li>
-      </ul>
-      <div class="price">₹350 / month</div>
-    </div>
-
-    <div class="card">
-      <h3>Netherite Plan</h3>
-      <ul>
-        <li>RAM: 24GB</li>
-        <li>CPU: 400%</li>
-        <li>Storage: 50GB SSD</li>
-        <li>Players: 70–80</li>
-        <li>Best for: Large SMP</li>
-      </ul>
-      <div class="price">₹500 / month</div>
+      <a class="buy" href="#">Buy Now</a>
     </div>
 
   </div>
 </div>
 
-<!-- SECTION 2 -->
+<!-- POWER -->
 <div id="power" class="section">
   <div class="coming">🚧 Coming Soon 🚧</div>
 </div>
 
-<!-- SECTION 3 -->
+<!-- OFFER -->
 <div id="offer" class="section">
   <div class="offer">
     <h3>IRON PLAN – SPECIAL OFFER</h3>
     <p><span class="old">₹270</span> → <span class="new">₹230 / month</span></p>
-
     <ul>
-      <li>RAM: 12GB DDR4</li>
-      <li>Storage: 40GB NVMe</li>
-      <li>CPU: 250%</li>
-      <li>Cloud Backups: 2×</li>
+      <li>12GB DDR4 RAM</li>
+      <li>40GB NVMe</li>
+      <li>CPU 250%</li>
+      <li>2× Cloud Backups</li>
       <li>DDoS Protection</li>
-      <li>Fast Server Setup</li>
-      <li>No Data Loss Guarantee</li>
-      <li>Stable Performance</li>
-      <li>⏳ Limited Time Offer (0/1)</li>
+      <li>Fast Setup</li>
+      <li>No Data Loss</li>
+      <li>⏳ Limited (0/1)</li>
     </ul>
+    <a class="buy" href="#">Buy Now</a>
   </div>
 </div>
 
 <footer>
-  © 2026 NeonMine Hosting
+  © 2026 NeonMine Hosting • Powered by GitHub Pages
 </footer>
 
 <script>
-function openTab(tabId){
-  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-
-  document.getElementById(tabId).classList.add('active');
+function openTab(id){
+  document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
   event.target.classList.add('active');
 }
 </script>
 
 </body>
-        </html>
+  </html>
