@@ -1,51 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MyCloudHost - Hosting Services</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin:0; padding:0; }
-    header { background:#0a0a23; color:white; padding:20px; text-align:center; }
-    nav a { margin: 0 15px; color:white; text-decoration:none; font-weight:bold; }
-    .hero { text-align:center; padding:60px; background:#1a1a45; color:white; }
-    .services { padding:40px; display:flex; gap:20px; justify-content:center; flex-wrap:wrap; }
-    .service-card { border:1px solid #ddd; padding:20px; width:250px; border-radius:8px; }
-    footer { background:#0a0a23; color:white; padding:15px; text-align:center; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NeonMine Hosting</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+  background:#0b0b0b;
+  color:#fff;
+}
+
+/* HEADER */
+header{
+  background:linear-gradient(135deg,#ffcc00,#ff9900);
+  padding:25px;
+  text-align:center;
+}
+header h1{
+  font-size:2.2rem;
+  color:#000;
+}
+header p{
+  color:#222;
+  font-weight:600;
+}
+
+/* SECTIONS */
+section{
+  padding:50px 20px;
+}
+.section-title{
+  text-align:center;
+  font-size:2rem;
+  margin-bottom:30px;
+  color:#ffcc00;
+}
+
+/* PLAN CARDS */
+.plans{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:25px;
+}
+
+.card{
+  background:#151515;
+  border:1px solid #333;
+  width:280px;
+  padding:25px;
+  border-radius:15px;
+  transition:0.3s;
+}
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 0 25px rgba(255,204,0,0.3);
+}
+
+.card h3{
+  color:#ffcc00;
+  margin-bottom:15px;
+  text-align:center;
+}
+.card ul{
+  list-style:none;
+  font-size:14px;
+  line-height:1.7;
+}
+.price{
+  margin-top:15px;
+  text-align:center;
+  font-size:20px;
+  color:#00ff99;
+  font-weight:bold;
+}
+
+/* COMING SOON */
+.coming-soon{
+  text-align:center;
+  font-size:2rem;
+  color:#999;
+  border:2px dashed #444;
+  padding:60px;
+  border-radius:15px;
+}
+
+/* LIMITED OFFER */
+.offer{
+  background:linear-gradient(135deg,#1a1a1a,#000);
+  border:2px solid #ff4444;
+  max-width:600px;
+  margin:auto;
+  padding:30px;
+  border-radius:20px;
+  text-align:center;
+}
+.offer h3{
+  color:#ff4444;
+  margin-bottom:15px;
+}
+.offer .old{
+  text-decoration:line-through;
+  color:#aaa;
+}
+.offer .new{
+  font-size:26px;
+  color:#00ff99;
+  font-weight:bold;
+}
+.offer ul{
+  list-style:none;
+  margin-top:20px;
+  line-height:1.8;
+}
+
+/* FOOTER */
+footer{
+  background:#000;
+  text-align:center;
+  padding:20px;
+  color:#777;
+}
+</style>
 </head>
+
 <body>
 
 <header>
-  <h1>MyCloudHost</h1>
-  <nav>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <h1>⚡ NeonMine Hosting</h1>
+  <p>Affordable • Powerful • Reliable Minecraft Hosting</p>
 </header>
 
-<section class="hero">
-  <h2>Powerful Hosting & Cloud Services</h2>
-  <p>Fast. Secure. Reliable.</p>
+<!-- SECTION 1 -->
+<section>
+  <h2 class="section-title">Minecraft Budget Plans</h2>
+
+  <div class="plans">
+
+    <div class="card">
+      <h3>Dirt Plan</h3>
+      <ul>
+        <li>RAM: 4GB</li>
+        <li>CPU: 100%</li>
+        <li>Storage: 10GB SSD</li>
+        <li>Players: 10–15</li>
+        <li>Best for: Friends SMP</li>
+      </ul>
+      <div class="price">₹70 / month</div>
+    </div>
+
+    <div class="card">
+      <h3>Stone Plan</h3>
+      <ul>
+        <li>RAM: 6GB</li>
+        <li>CPU: 150%</li>
+        <li>Storage: 15GB SSD</li>
+        <li>Players: 20–25</li>
+        <li>Best for: Plugin Servers</li>
+      </ul>
+      <div class="price">₹130 / month</div>
+    </div>
+
+    <div class="card">
+      <h3>Iron Plan</h3>
+      <ul>
+        <li>RAM: 8GB</li>
+        <li>CPU: 200%</li>
+        <li>Storage: 20GB SSD</li>
+        <li>Players: 25–30</li>
+        <li>Best for: Semi-Modded</li>
+      </ul>
+      <div class="price">₹180 / month</div>
+    </div>
+
+    <div class="card">
+      <h3>Gold Plan</h3>
+      <ul>
+        <li>RAM: 12GB</li>
+        <li>CPU: 250%</li>
+        <li>Storage: 30GB SSD</li>
+        <li>Players: 35–40</li>
+        <li>Best for: Large SMP</li>
+      </ul>
+      <div class="price">₹270 / month</div>
+    </div>
+
+    <div class="card">
+      <h3>Diamond Plan</h3>
+      <ul>
+        <li>RAM: 16GB</li>
+        <li>CPU: 300%</li>
+        <li>Storage: 40GB SSD</li>
+        <li>Players: 50–60</li>
+        <li>Best for: Large SMP</li>
+      </ul>
+      <div class="price">₹350 / month</div>
+    </div>
+
+    <div class="card">
+      <h3>Netherite Plan</h3>
+      <ul>
+        <li>RAM: 24GB</li>
+        <li>CPU: 400%</li>
+        <li>Storage: 50GB SSD</li>
+        <li>Players: 70–80</li>
+        <li>Best for: Large SMP</li>
+      </ul>
+      <div class="price">₹500 / month</div>
+    </div>
+
+  </div>
 </section>
 
-<section id="services" class="services">
-  <div class="service-card">
-    <h3>Minecraft Hosting</h3>
-    <p>24/7 uptime, easy control panel</p>
-  </div>
-  <div class="service-card">
-    <h3>VPS Servers</h3>
-    <p>Full root access</p>
-  </div>
-  <div class="service-card">
-    <h3>Web Hosting</h3>
-    <p>SSD, cPanel included</p>
+<!-- SECTION 2 -->
+<section>
+  <h2 class="section-title">Minecraft Power Plans</h2>
+  <div class="coming-soon">🚧 Coming Soon 🚧</div>
+</section>
+
+<!-- SECTION 3 -->
+<section>
+  <h2 class="section-title">🔥 Limited Offer</h2>
+
+  <div class="offer">
+    <h3>IRON PLAN – SPECIAL OFFER</h3>
+
+    <p>
+      <span class="old">₹270</span> →
+      <span class="new">₹230 / month</span>
+    </p>
+
+    <ul>
+      <li>RAM: 12GB DDR4</li>
+      <li>Storage: 40GB NVMe</li>
+      <li>CPU: 250%</li>
+      <li>Cloud Backups: 2×</li>
+      <li>✔ DDoS Protection</li>
+      <li>✔ Fast Server Setup</li>
+      <li>✔ No Data Loss Guarantee</li>
+      <li>✔ Stable Performance</li>
+      <li>⏳ Limited Time Offer (0/1)</li>
+    </ul>
   </div>
 </section>
 
 <footer>
-  <p>Contact: info@mycloudhost.com</p>
+  <p>© 2026 NeonMine Hosting • All Rights Reserved</p>
 </footer>
 
 </body>
